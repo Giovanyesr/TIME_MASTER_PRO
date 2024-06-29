@@ -8,25 +8,22 @@ from src.logica.clase_alarma import Alarm
 class AlarmApp(AlarmUI):
     def __init__(self):
         super().__init__()
-        self.alarms = []  # Lista para almacenar las horas de las alarmas
+        self.alarms = []
 
-        # Timer para verificar la alarma cada segundo
         self.alarm_timer = QTimer(self)
         self.alarm_timer.timeout.connect(self.check_alarm)
-        self.alarm_timer.start(1000)  # Verificar cada segundo
+        self.alarm_timer.start(1000)
 
-        # Conectar el botón de configurar alarma
-        self.btn_set_alarm.clicked.disconnect()  # Desconectar cualquier conexión previa
+        self.btn_set_alarm.clicked.disconnect()
         self.btn_set_alarm.clicked.connect(self.set_alarm)
 
     def set_alarm(self):
         alarm_time = self.time_edit.time().toString('HH:mm:ss')
-        if alarm_time not in self.alarms:  # Verificar si la alarma ya está en la lista
+        if alarm_time not in self.alarms:
             self.add_alarm_to_list(alarm_time)
             self.alarms.append(alarm_time)
             QMessageBox.information(self, 'Configuración de Alarma', f'Alarma configurada para las {alarm_time}')
 
-            # Guardar la alarma en la bd
             new_alarm = Alarm(alarm_time=alarm_time)
             new_alarm.save_to_db()
 

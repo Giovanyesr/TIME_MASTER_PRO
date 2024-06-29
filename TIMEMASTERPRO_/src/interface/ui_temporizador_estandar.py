@@ -9,39 +9,39 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
 
         self.timeLabel = QtWidgets.QLabel(self.centralwidget)
-        self.timeLabel.setGeometry(QtCore.QRect(50, 50, 400, 150))  # Aumenté el tamaño del label para mayor visibilidad
+        self.timeLabel.setGeometry(QtCore.QRect(50, 50, 400, 150))
         self.timeLabel.setAlignment(QtCore.Qt.AlignCenter)
         font = QtGui.QFont()
-        font.setPointSize(80)  # Ajusté el tamaño de la fuente para que sea más grande
+        font.setPointSize(80)
         font.setBold(True)
         self.timeLabel.setFont(font)
         self.timeLabel.setObjectName("timeLabel")
 
         self.statusLabel = QtWidgets.QLabel(self.centralwidget)
-        self.statusLabel.setGeometry(QtCore.QRect(50, 10, 400, 30))  # Aumenté el tamaño del label para mayor visibilidad
-        font.setPointSize(16)  # Ajusté el tamaño de la fuente para que sea más grande
+        self.statusLabel.setGeometry(QtCore.QRect(50, 10, 400, 30))
+        font.setPointSize(16)
         self.statusLabel.setFont(font)
         self.statusLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.statusLabel.setObjectName("statusLabel")
 
         self.startButton = QtWidgets.QPushButton("Empezar", self.centralwidget)
-        self.startButton.setGeometry(QtCore.QRect(50, 250, 100, 30))  # Ajusté el tamaño y la posición del botón
+        self.startButton.setGeometry(QtCore.QRect(50, 250, 100, 30))
 
         self.pauseButton = QtWidgets.QPushButton("Pausar", self.centralwidget)
-        self.pauseButton.setGeometry(QtCore.QRect(170, 250, 100, 30))  # Ajusté el tamaño y la posición del botón
+        self.pauseButton.setGeometry(QtCore.QRect(170, 250, 100, 30))
 
         self.resumeButton = QtWidgets.QPushButton("Reanudar", self.centralwidget)
-        self.resumeButton.setGeometry(QtCore.QRect(290, 250, 100, 30))  # Ajusté el tamaño y la posición del botón
+        self.resumeButton.setGeometry(QtCore.QRect(290, 250, 100, 30))
 
         self.resetButton = QtWidgets.QPushButton("Reiniciar", self.centralwidget)
-        self.resetButton.setGeometry(QtCore.QRect(410, 250, 100, 30))  # Ajusté el tamaño y la posición del botón
+        self.resetButton.setGeometry(QtCore.QRect(410, 250, 100, 30))
 
         self.totalTimeSpinBox = QtWidgets.QSpinBox(self.centralwidget)
-        self.totalTimeSpinBox.setGeometry(QtCore.QRect(50, 300, 100, 30))  # Ajusté el tamaño y la posición del spinbox
+        self.totalTimeSpinBox.setGeometry(QtCore.QRect(50, 300, 100, 30))
         self.totalTimeSpinBox.setMaximum(3600)
 
         self.totalTimeLabel = QtWidgets.QLabel("Tiempo Total (segundos):", self.centralwidget)
-        self.totalTimeLabel.setGeometry(QtCore.QRect(170, 300, 200, 30))  # Ajusté el tamaño y la posición del label
+        self.totalTimeLabel.setGeometry(QtCore.QRect(170, 300, 200, 30))
 
         MainWindow.setCentralWidget(self.centralwidget)
 

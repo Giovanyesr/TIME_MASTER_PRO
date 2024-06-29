@@ -112,7 +112,7 @@ class PomodoroTimer(QMainWindow):
 
                 if self.cycles >= self.total_cycles:
                     self.show_final_message()
-                    self.save_to_db()  # Guardar el Pomodoro en la bd al finalizar
+                    self.save_to_db()
                     self.reset_timer()
                     return
 
